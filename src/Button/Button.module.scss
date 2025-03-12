@@ -1,0 +1,158 @@
+a {
+    &.btn {
+        cursor: pointer;
+
+        button {
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.btn {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    // transition: 0.3s;
+    border: 1px solid transparent;
+
+    svg {
+        width: 24px;
+        margin-right: 10px;
+    }
+
+    button {
+        background-color: transparent;
+        font-size: inherit;
+        color: inherit;
+        font-weight: inherit;
+    }
+
+    &.default {
+        background: var(--button-blue, #2977EC);
+        color: var(--text-white, #FFF);
+
+        @media (hover) {
+            &:hover {
+                background-color: #5F9EFC;
+            }
+        }
+
+        &:active {
+            background-color: #1B60C9;
+        }
+
+        &.disabled {
+            background-color: #D8D8DB;
+            color: #9797A0;
+            cursor: default;
+        }
+    }
+
+    &.grey {
+        background: var(--dark-button-gray, #313336);
+        color: #FFF;
+
+        @media (hover) {
+            &:hover {
+                background: var(--transparent-w-30, rgba(255, 255, 255, 0.30));
+            }
+        }
+
+        &:active {
+            background: var(--transparent-w-30, rgba(255, 255, 255, 0.30));
+        }
+
+        &.disabled {
+            opacity: 0.4;
+            background: var(--transparent-w-14, rgba(255, 255, 255, 0.14));
+        }
+    }
+
+    &.light_grey {
+        background: rgba(244, 244, 244, 1);
+        color: rgba(13, 12, 33, 1);
+
+        @media (hover) {
+            &:hover {
+                background: rgba(230, 230, 230, 1);
+            }
+        }
+
+        &:active {
+            background: rgba(230, 230, 230, 1);
+        }
+
+        &.disabled {
+            opacity: 0.4;
+            background: rgba(244, 244, 244, 1);
+        }
+    }
+
+    &.bordered {
+        border: 1px solid var(--stroke-blue, #2977EC);
+        background-color: transparent;
+        color: #0D0C21;
+
+        &:hover {
+            border: 1px solid var(--stroke-blue, #2977EC);
+            background: rgba(41, 119, 236, 0.12);
+        }
+
+        &:active {
+            border: 1px solid var(--stroke-blue, #2977EC);
+            background: rgba(41, 119, 236, 0.24);
+        }
+
+        &.disabled {
+            border: 1px solid var(--stroke-dark, #C2C2C2);
+            color: #9797A0;
+            background-color: transparent;
+        }
+    }
+
+    &.transparent {
+        background: var(--transparent-w-14, rgba(255, 255, 255, 0.14));
+        color: #FFF;
+
+        &:hover {
+            background: var(--transparent-w-30, rgba(255, 255, 255, 0.30));
+        }
+
+        &:active {
+            background: var(--transparent-w-30, rgba(255, 255, 255, 0.30));
+        }
+
+        &.disabled {
+            opacity: 0.4;
+            background: var(--transparent-w-14, rgba(255, 255, 255, 0.14));
+        }
+    }
+
+    &.whiteColor {
+        background: #fff;
+        color: #0D0C21;
+        border-color: #E0E0E0;
+
+        &:hover {
+            background: #EBEBEB;
+        }
+
+        &:active {
+            background: #D8D8DB;
+        }
+
+        &.disabled {
+            color: #9797A0;
+            background: #D8D8DB;
+        }
+    }
+
+    &.disabled:hover {
+        cursor: not-allowed;
+    }
+}
