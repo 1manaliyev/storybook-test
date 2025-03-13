@@ -13,7 +13,8 @@
     ".": {
       "types": "./dist/ooia-ui-library-test-1.es.d.ts",
       "import": "./dist/ooia-ui-library-test-1.es.js"
-    }
+    },
+    "./style.css": "./dist/ooia-ui-library-test-1.css"
   },
   "scripts": {
     "dev": "vite",
