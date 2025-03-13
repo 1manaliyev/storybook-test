@@ -21,7 +21,7 @@ interface Props {
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-export const Button: FC<Props> = ({
+const Button: FC<Props> = ({
   children,
   className,
   href,
@@ -71,3 +71,5 @@ export const Button: FC<Props> = ({
     </button>
   );
 };
+
+export default Button;
