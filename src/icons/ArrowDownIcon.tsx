@@ -1,8 +1,8 @@
-interface Props {
+export interface IconProps {
   color?: string;
 }
 
-export const ArrowDownIcon: React.FC<Props> = ({ color = "white" }) => {
+const ArrowDownIcon: React.FC<IconProps> = ({ color = "white" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,3 +18,5 @@ export const ArrowDownIcon: React.FC<Props> = ({ color = "white" }) => {
     </svg>
   );
 };
+
+export default ArrowDownIcon;

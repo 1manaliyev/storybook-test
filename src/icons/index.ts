@@ -1,5 +1,1 @@
-import { ArrowDownIcon } from "./ArrowDownIcon";
-
-export default {
-    ArrowDownIcon
-}
+export { default as ArrowDownIcon } from "./ArrowDownIcon";

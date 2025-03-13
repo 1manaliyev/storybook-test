@@ -3,7 +3,7 @@ import { FC, JSX } from "react";
 import { Link } from "react-router-dom";
 import s from "./Button.module.scss";
 
-interface Props {
+export interface ButtonProps {
   children: JSX.Element | string;
   className?: string;
   href?: string;
@@ -21,7 +21,7 @@ interface Props {
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const Button: FC<Props> = ({
+const Button: FC<ButtonProps> = ({
   children,
   className,
   href,
@@ -41,7 +41,7 @@ const Button: FC<Props> = ({
       [s.grey]: htmlType === "grey",
       [s.bordered]: htmlType === "blue-border",
       [s.transparent]: htmlType === "transparent",
-      [s.lg]: size === "lg"
+      [s.lg]: size === "lg",
     },
     className
   );
