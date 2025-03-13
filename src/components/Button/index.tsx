@@ -10,7 +10,7 @@ export interface ButtonProps {
   blank?: boolean;
   type?: "submit";
   disabled?: boolean;
-  size: "md" | "lg";
+  size?: "md" | "lg";
   htmlType?:
     | "white"
     | "grey"
