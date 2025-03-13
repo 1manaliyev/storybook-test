@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: (format) => `ooia-ui-library-test-1.${format}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", 'react-router-dom'],
       output: {
         globals: {
           react: "React",

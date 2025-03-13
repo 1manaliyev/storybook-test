@@ -29,8 +29,7 @@
   },
   "peerDependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.3.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.5",
@@ -56,6 +55,7 @@
     "playwright": "^1.51.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.3.0",
     "sass": "^1.85.1",
     "storybook": "^8.6.4",
     "typescript": "~5.7.2",
