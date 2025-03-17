@@ -12,9 +12,9 @@
     "./package.json": "./package.json",
     ".": {
       "types": "./dist/ooia-ui-library-test-1.es.d.ts",
-      "import": "./dist/ooia-ui-library-test-1.es.js"
-    },
-    "./style.css": "./dist/ooia-ui-library-test-1.css"
+      "import": "./dist/ooia-ui-library-test-1.es.js",
+      "style": "./dist/ooia-ui-library-test-1.css"
+    }
   },
   "scripts": {
     "dev": "vite",
@@ -31,7 +31,9 @@
   "peerDependencies": {
     "react": ">=18.3.1 <19",
     "react-dom": ">=18.3.1 <19",
-    "react-router-dom": ">=6.24.0 <8"
+    "react-router-dom": ">=6.24.0 <8",
+    "eslint": ">=8.56.0 <10",
+    "@typescript-eslint/eslint-plugin": ">=7.13.1 <8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.5",
