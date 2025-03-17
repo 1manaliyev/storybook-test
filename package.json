@@ -32,8 +32,9 @@
     "react": ">=18.3.1 <19",
     "react-dom": ">=18.3.1 <19",
     "react-router-dom": ">=6.24.0 <8",
-    "eslint": ">=8.56.0 <10",
-    "@typescript-eslint/eslint-plugin": ">=7.13.1 <8"
+    "eslint": ">=8.56.0 <10 || ^9.21.0",
+    "@typescript-eslint/eslint-plugin": ">=7.13.1 <8",
+    "@typescript-eslint/parser": ">=7.13.1 <8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.5",
