@@ -93,3 +93,44 @@ export const TransparentDisabled: Story = {
     disabled: true,
   },
 };
+
+export const AllButtons: Story = {
+  render: () => (
+    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <h3>Default</h3>
+      <Button htmlType="default">Default</Button>
+      <h3>Default Large</h3>
+      <Button htmlType="default" size="lg">
+        Default Large
+      </Button>
+      <h3>Default Disabled</h3>
+      <Button htmlType="default" disabled>
+        Default Disabled
+      </Button>
+      <h3>White</h3>
+      <Button htmlType="white">White</Button>
+      <h3>White Disabled</h3>
+      <Button htmlType="white" disabled>
+        White Disabled
+      </Button>
+      <h3>Grey</h3>
+      <Button htmlType="grey">Gray</Button>
+      <h3>Grey Disabled</h3>
+      <Button htmlType="grey" disabled>
+        Gray Disabled
+      </Button>
+      <h3>Blue Bordered</h3>
+      <Button htmlType="blue-border">Blue Border</Button>
+      <h3>Blue Bordered Disabled</h3>
+      <Button htmlType="blue-border" disabled>
+        Blue Border Disabled
+      </Button>
+      <h3>Transparent</h3>
+      <Button htmlType="transparent">Transparent</Button>
+      <h3>Transparent Disabled</h3>
+      <Button htmlType="transparent" disabled>
+        Transparent Disabled
+      </Button>
+    </div>
+  ),
+};
