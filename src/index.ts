@@ -1,4 +1,4 @@
-import "../dist/ooia-ui-library-test-1.css";
+import "./styles/color-variables.module.scss";
+import "./styles/global.module.scss";
 export * from "./components";
 export * from "./icons";
-
