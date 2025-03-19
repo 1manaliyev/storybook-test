@@ -1,7 +1,7 @@
 {
   "name": "ooia-ui-library-test-1",
   "private": false,
-  "version": "1.0.32",
+  "version": "1.0.33",
   "type": "module",
   "files": [
     "dist"
