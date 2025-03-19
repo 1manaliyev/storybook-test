@@ -17,7 +17,17 @@ interface Props {
     | "h10Title"
     | "h10_1Title"
     | "h11Title"
-    | "h12Title";
+    | "h12Title"
+    | "b1"
+    | "b1_1"
+    | "b2"
+    | "b3"
+    | "b4"
+    | "b5"
+    | "b6"
+    | "b7"
+    | "b8"
+    | "b9"
 }
 
 const Typography: FC<Props> = ({ children, variant }) => {
@@ -49,6 +59,26 @@ const Typography: FC<Props> = ({ children, variant }) => {
         return s.h11;
       case "h12Title":
         return s.h12;
+      case "b1":
+        return s.b1;
+      case "b1_1":
+        return s.b1_1;
+      case "b2":
+        return s.b2;
+      case "b3":
+        return s.b3;
+      case "b4":
+        return s.b4;
+      case "b5":
+        return s.b5;
+      case "b6":
+        return s.b6;
+      case "b7":
+        return s.b7;
+      case "b8":
+        return s.b8;
+      case "b9":
+        return s.b9;
     }
   }, []);
 
