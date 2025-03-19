@@ -4,7 +4,7 @@ import s from "./Typography.module.scss";
 
 interface Props {
   children: JSX.Element | string;
-  variant:
+  variant?:
     | "h1Title"
     | "h2Title"
     | "h3Title"
@@ -30,7 +30,7 @@ interface Props {
     | "b9"
 }
 
-const Typography: FC<Props> = ({ children, variant }) => {
+const Typography: FC<Props> = ({ children, variant = "b1" }) => {
   const className = useMemo(() => {
     switch (variant) {
       case "h1Title":
