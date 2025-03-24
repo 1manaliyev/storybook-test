@@ -1,4 +1,4 @@
-:root {
+.light {
     --bg-black: #191A22;
     --dark-gray: #DDDDE4;
     --bg-gray: #F1F1F3;
@@ -37,8 +37,7 @@
     --transparent-b-24: rgba(41, 119, 236, 0.24);
 }
 
-
-:root.dark {
+.dark {
     --bg-black: #1A1C1F;
     --dark-gray: #343638;
     --bg-gray: #232528;
