@@ -36,3 +36,43 @@
     --transparent-b-12: rgba(41, 119, 236, 0.12);
     --transparent-b-24: rgba(41, 119, 236, 0.24);
 }
+
+
+:root.dark {
+    --bg-black: #1A1C1F;
+    --dark-gray: #343638;
+    --bg-gray: #232528;
+    --light-gray: #1E2023;
+    --white: #FFFFFF;
+    --bg_white: #FFFFFF;
+    --stoke-dark: #515255;
+    --stroke-normal: #35373A;
+    --stroke-light: #2C2E31;
+    --stroke-white: #1A1C1F;
+    --stroke-blue: #2977EC;
+    --text-black: #FFFFFF;
+    --text-dark-gray: #C3C4C5;
+    --text-gray: #7C7E7F;
+    --text-light-gray: #434547;
+    --text-white: #0D0C21;
+    --text-light-white: #FFFFFF;
+    --text-dark-white: #FFFFFF;
+    --text-blue: #2977EC;
+    --extra-green: #43D26C;
+    --extra-red: #E34F4F;
+    --extra-warning: #ECB937;
+    --button-blue: #2977EC;
+    --button-blue-hov: #5F9EFC;
+    --button-blue-act: #1B60C9;
+    --button-white: #FFFFFF;
+    --button-white-act: #F5F5F5;
+    --button-disabled: #D8D8DB;
+    --button-gray: #313336;
+    --button-gray-hov: #3C3E40;
+    --button-gray-act: #232528;
+    --transparent-w-30: rgba(255, 255, 255, 0.30);
+    --transparent-w-14: rgba(255, 255, 255, 0.14);
+    --transparent-d-30: rgba(13, 12, 33, 0.3);
+    --transparent-b-12: rgba(41, 119, 236, 0.12);
+    --transparent-b-24: rgba(41, 119, 236, 0.24);
+}

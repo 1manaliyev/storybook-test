@@ -1,0 +1,32 @@
+@keyframes progress {
+    to {
+        stroke-dasharray: 100 100;
+    }
+}
+
+.icon {
+    &_circleChart {
+        position: relative;
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    &_circleBackground,
+    &_circleProgress {
+        fill: none;
+        stroke-width: 2;
+    }
+
+    &_circleProgress {
+        stroke-linecap: round;
+        stroke-dasharray: 0 100;
+        animation: progress 4s ease-out forwards;
+    }
+    svg {
+        width: 12px;
+    }
+}
