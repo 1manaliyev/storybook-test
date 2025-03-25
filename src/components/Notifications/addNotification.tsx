@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Notifications from ".";
 import { useNotificationStore } from "./store/NotificationStore";
 
 interface Props {
@@ -14,14 +13,11 @@ export const AddNotification: FC<Props> = ({status, title, text}) => {
         showNotifiсation(status, title, text);
     }
     return (
-      <>
-        <div
-          onClick={onClick}
-          style={{ cursor: "pointer", userSelect: "none" }}
-        >
-          Add notification
-        </div>
-        <Notifications/>
-      </>
+      <div
+        onClick={onClick}
+        style={{ cursor: "pointer", userSelect: "none" }}
+      >
+        Add notification
+      </div>
     );
 }

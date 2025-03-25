@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { AddNotification } from "./addNotification";
+import { AddNotificationWrapper } from "./addNotificationWrapper";
 import { NotificationStoreProvider } from "./store/NotificationStore";
 
-const meta: Meta<typeof AddNotification> = {
+const meta: Meta<typeof AddNotificationWrapper> = {
   title: "Components/Notification",
-  component: AddNotification,
+  component: AddNotificationWrapper,
   tags: ["autodocs"],
   parameters: {
     docs: {
@@ -22,7 +22,7 @@ const meta: Meta<typeof AddNotification> = {
 
 export default meta;
 
-type Story = StoryObj<typeof AddNotification>;
+type Story = StoryObj<typeof AddNotificationWrapper>;
 
 export const Success: Story = {
   args: {
