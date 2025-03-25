@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Dispatch, SetStateAction, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CheckMarkIcon, CloseIcon, InfoIconNoBg } from "../../icons";
 import { CircleLoaderIcon } from "../CircleLoaderIcon/CircleLoaderIcon";
 import s from "./Notification.module.scss";
@@ -9,10 +9,7 @@ interface Props {
   onRemove: (id: number) => void;
   title: string;
   status: "success" | "warning" | "copied" | "error";
-  setTitle: Dispatch<SetStateAction<string>>;
-  setStatus: Dispatch<
-    SetStateAction<"success" | "warning" | "copied" | "error">
-  >;
+  text: string;
 }
 
 enum colors {
@@ -26,7 +23,7 @@ enum colors {
   light_blue = "rgba(41, 119, 236, 0.2)",
 }
 
-export const Notification: React.FC<Props> = ({ id, onRemove, title, status }) => {
+export const Notification: React.FC<Props> = ({ id, onRemove, title, status, text }) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -84,7 +81,7 @@ export const Notification: React.FC<Props> = ({ id, onRemove, title, status }) =
               s.icon_inner,
               status === "warning" && s.orange,
               status === "success" && s.green,
-              status === "copied" && s.blue,
+              status === "copied" && s.blue
             )}
           >
             {status === "success" && <CheckMarkIcon color={colors.green} />}
@@ -95,6 +92,7 @@ export const Notification: React.FC<Props> = ({ id, onRemove, title, status }) =
         </div>
         <div className={s.content}>
           <div className={s.title}>{title}</div>
+          {text && <div className={s.text}>{text}</div>}
         </div>
       </div>
       <div
