@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Notifications from ".";
-import { useNotificationsStore } from "./store/NotificationsStore";
+import { useNotificationStore } from "./store/NotificationStore";
 
 interface Props {
   status: "success" | "warning" | "error" | "copied";
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const AddNotification: FC<Props> = ({status, title, text}) => {
-    const {showNotifiсation} = useNotificationsStore();
+    const {showNotifiсation} = useNotificationStore();
     const onClick = () => {
         showNotifiсation(status, title, text);
     }

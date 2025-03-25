@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { AddNotification } from "./addNotification";
-import { NotificationsStoreProvider } from "./store/NotificationsStore";
+import { NotificationStoreProvider } from "./store/NotificationStore";
 
 const meta: Meta<typeof AddNotification> = {
   title: "Components/Notification",
@@ -13,9 +13,9 @@ const meta: Meta<typeof AddNotification> = {
   },
   decorators: [
     (Story) => (
-      <NotificationsStoreProvider>
+      <NotificationStoreProvider>
         <Story />
-      </NotificationsStoreProvider>
+      </NotificationStoreProvider>
     ),
   ],
 };

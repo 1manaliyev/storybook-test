@@ -9,11 +9,11 @@ import React, {
   useState,
 } from "react";
 
-interface NotificationsStoreProviderProps {
+interface NotificationStoreProviderProps {
   children: ReactNode;
 }
 
-export interface NotificationsStoreContextType {
+export interface NotificationStoreContextType {
   components: { id: number }[];
   counter: number;
   addComponent: () => void;
@@ -23,7 +23,9 @@ export interface NotificationsStoreContextType {
   text: string;
   setText: Dispatch<SetStateAction<string>>;
   status: "success" | "warning" | "error" | "copied";
-  setStatus: Dispatch<SetStateAction<"success" | "warning" | "error" | "copied">>;
+  setStatus: Dispatch<
+    SetStateAction<"success" | "warning" | "error" | "copied">
+  >;
   showNotifiсation: (
     status: "success" | "warning" | "error" | "copied",
     title: string,
@@ -31,19 +33,19 @@ export interface NotificationsStoreContextType {
   ) => void;
 }
 
-const NotificationsStoreContext = createContext<
-  NotificationsStoreContextType | undefined
+const NotificationStoreContext = createContext<
+  NotificationStoreContextType | undefined
 >(undefined);
 
-export const NotificationsStoreProvider: React.FC<
-  NotificationsStoreProviderProps
+export const NotificationStoreProvider: React.FC<
+  NotificationStoreProviderProps
 > = ({ children }) => {
   const [components, setComponents] = useState<{ id: number }[]>([]);
   const [counter, setCounter] = useState(0);
   const [title, setTitle] = useState("success");
-  const [status, setStatus] = useState<"success" | "warning" | "error" | "copied">(
-    "warning"
-  );
+  const [status, setStatus] = useState<
+    "success" | "warning" | "error" | "copied"
+  >("warning");
   const [text, setText] = useState("");
 
   const addComponent = useCallback(() => {
@@ -56,7 +58,11 @@ export const NotificationsStoreProvider: React.FC<
   }, []);
 
   const showNotifiсation = useCallback(
-    (newStatus: "success" | "warning" | "error" | "copied", newTitle: string, text: string) => {
+    (
+      newStatus: "success" | "warning" | "error" | "copied",
+      newTitle: string,
+      text: string
+    ) => {
       setStatus(newStatus);
       setTitle(newTitle);
       setText(text);
@@ -66,7 +72,7 @@ export const NotificationsStoreProvider: React.FC<
     [counter]
   );
 
-  const storeRef = useRef<NotificationsStoreContextType>({
+  const storeRef = useRef<NotificationStoreContextType>({
     components,
     counter,
     addComponent,
@@ -77,7 +83,7 @@ export const NotificationsStoreProvider: React.FC<
     setStatus,
     showNotifiсation,
     text,
-    setText
+    setText,
   });
 
   storeRef.current = {
@@ -91,21 +97,21 @@ export const NotificationsStoreProvider: React.FC<
     setStatus,
     showNotifiсation,
     text,
-    setText
+    setText,
   };
 
   return (
-    <NotificationsStoreContext.Provider value={storeRef.current}>
+    <NotificationStoreContext.Provider value={storeRef.current}>
       {children}
-    </NotificationsStoreContext.Provider>
+    </NotificationStoreContext.Provider>
   );
 };
 
-export const useNotificationsStore = () => {
-  const context = useContext(NotificationsStoreContext);
+export const useNotificationStore = () => {
+  const context = useContext(NotificationStoreContext);
   if (!context) {
     throw new Error(
-      "useNotificationsStore must be used within a NotificationsStoreProvider"
+      "useNotificationStore must be used within a NotificationStoreProvider"
     );
   }
   return context;
