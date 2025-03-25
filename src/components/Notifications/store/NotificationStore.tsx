@@ -107,7 +107,7 @@ export const NotificationStoreProvider: React.FC<
   );
 };
 
-const useNotificationStore = () => {
+export const useNotificationStore = () => {
   const context = useContext(NotificationStoreContext);
   if (!context) {
     throw new Error(
@@ -116,5 +116,3 @@ const useNotificationStore = () => {
   }
   return context;
 };
-
-export default useNotificationStore;
