@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Notification } from "./notification";
 import s from "./NotificationItems.module.scss";
-import { useNotificationsStore } from "./store/NotificationsStore";
+import { NotificationsStoreProvider, useNotificationsStore } from "./store/NotificationsStore";
 
 interface Props{
   children?: JSX.Element;
@@ -12,7 +12,7 @@ const Notifications: FC<Props> = ({ children }) => {
     useNotificationsStore();
 
   return (
-    <>
+    <NotificationsStoreProvider>
       {children}
       <div className={s.notifications}>
         {components.map((comp) => (
@@ -26,7 +26,7 @@ const Notifications: FC<Props> = ({ children }) => {
           />
         ))}
       </div>
-    </>
+    </NotificationsStoreProvider>
   );
 };
 
