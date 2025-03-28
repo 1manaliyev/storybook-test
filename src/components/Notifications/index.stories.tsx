@@ -8,13 +8,25 @@ const meta: Meta<typeof AddNotificationWrapper> = {
   tags: ["autodocs"],
   parameters: {
     docs: {
-      canvasHeight: 500,
+      source: {
+        code: `
+import {Notifications} from "ooia-ui-library-test-1";
+import { useNotificationStore } from "ooia-ui-library-test-1";
+const {showNotifiсation} = useNotificationStore();
+const onClick = () => {
+    showNotifiсation(status, title, text);
+}
+<div onClick={onClick}>Add notification</div>
+<Notifications>{...}</Notifications>`,
+      },
     },
   },
   decorators: [
     (Story) => (
       <NotificationStoreProvider>
-        <Story />
+        <div style={{ minHeight: "400px" }}>
+          <Story />
+        </div>
       </NotificationStoreProvider>
     ),
   ],
